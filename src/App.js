@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Component/Home/Home';
 import { UserProvider } from './Component/UserContext/UserContext';
+import Delete from './Component/Delete/Delete';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
      <BrowserRouter>
      <Routes>
       <Route path='/' element={<Home></Home>}/>
+      <Route path='delete' element={<Delete></Delete>}/>
      </Routes>
      </BrowserRouter>
      </UserProvider>

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext/UserContext';
 
 const Home = () => {
@@ -33,7 +34,10 @@ const Home = () => {
             <td>
                 <Button variant='success'>Read</Button>
                 <Button variant='info'>Edit</Button>
+                <Link to='delete'>
                 <Button variant='danger'>Delete</Button>
+                </Link>
+                
             </td>
           </tr>
           )
