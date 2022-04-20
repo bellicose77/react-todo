@@ -12,7 +12,7 @@ function App() {
      <BrowserRouter>
      <Routes>
       <Route path='/' element={<Home></Home>}/>
-      <Route path='delete' element={<Delete></Delete>}/>
+      <Route path='delete/:id' element={<Delete></Delete>}/>
      </Routes>
      </BrowserRouter>
      </UserProvider>
