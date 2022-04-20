@@ -30,7 +30,11 @@ const Home = () => {
             <td>{user.name}</td>
             <td>{user.position}</td>
             <td>{user.salary}</td>
-            <td></td>
+            <td>
+                <Button variant='success'>Read</Button>
+                <Button variant='info'>Edit</Button>
+                <Button variant='danger'>Delete</Button>
+            </td>
           </tr>
           )
       }
