@@ -7,7 +7,7 @@ const Delete = () => {
     const[users,setUsers]=useContext(UserContext);
     const{id}=useParams();
     const deleteUser = (id) => {
-        const user = users.filter(user=>user.id!=id);
+        const user = users.filter(user=>user.id!= id);
         setUsers(user);
     }
    
