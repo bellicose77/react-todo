@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { UserContext } from '../UserContext/UserContext';
 
 const Delete = () => {
+    const[users,setUsers]=useContext(UserContext)
     const{id}=useParams()
     return (
         <div>
