@@ -11,16 +11,16 @@ const Delete = () => {
         <div>
             <Modal.Dialog>
   <Modal.Header closeButton>
-    <Modal.Title>Modal title</Modal.Title>
+    <Modal.Title>Delete</Modal.Title>
   </Modal.Header>
 
   <Modal.Body>
-    <p>Modal body text goes here.</p>
+    <p>Are you sure want to delete?</p>
   </Modal.Body>
 
   <Modal.Footer>
-    <Button variant="secondary">Close</Button>
-    <Button variant="primary">Save changes</Button>
+    <Button variant="secondary">Cancel</Button>
+    <Button variant="primary">OK</Button>
   </Modal.Footer>
 </Modal.Dialog>
         </div>
