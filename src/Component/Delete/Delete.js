@@ -6,8 +6,8 @@ import { UserContext } from '../UserContext/UserContext';
 const Delete = () => {
     const[users,setUsers]=useContext(UserContext);
     const{id}=useParams();
-    const deleteUser = (id) =>{
-        const user = users.filter(user=>user.id!==id);
+    const deleteUser = (id) => {
+        const user = users.filter(user=>user.id!=id);
         setUsers(user);
     }
    
@@ -25,7 +25,7 @@ const Delete = () => {
   <Modal.Footer>
       <Link to='/'>
       <Button variant="secondary">Cancel</Button>
-    <Button onClick={()=>{ deleteUser(id)}} variant="primary">OK</Button>
+      <Button onClick={()=>deleteUser(id)} variant="primary">OK</Button>
       </Link>
     
   </Modal.Footer>
