@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../UserContext/UserContext';
 
 const Delete = () => {
@@ -19,8 +19,11 @@ const Delete = () => {
   </Modal.Body>
 
   <Modal.Footer>
-    <Button variant="secondary">Cancel</Button>
+      <Link to='/'>
+      <Button variant="secondary">Cancel</Button>
     <Button variant="primary">OK</Button>
+      </Link>
+    
   </Modal.Footer>
 </Modal.Dialog>
         </div>
