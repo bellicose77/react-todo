@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Component/Home/Home';
 import { UserProvider } from './Component/UserContext/UserContext';
 import Delete from './Component/Delete/Delete';
+import Read from './Component/Read/Read';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <Routes>
       <Route path='/' element={<Home></Home>}/>
       <Route path='delete/:id' element={<Delete></Delete>}/>
+      <Route path='/read/:id' element ={<Read></Read>}/>
      </Routes>
      </BrowserRouter>
      </UserProvider>
