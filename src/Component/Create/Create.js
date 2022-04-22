@@ -4,19 +4,25 @@ import { UserContext } from '../UserContext/UserContext';
 
 const Create = () => {
     const[users,setUsers]=useContext(UserContext);
-    const[input,setInput]=useState({})
+    const[input,setInput]=useState({
+      id:'',
+      name:'',
+      position:'',
+      salary:''
+
+    })
     const handleInput = (e) =>{
-        const nameInput=e.target.event;
-        setInput([...input,{nameInput:e.target.value}]);
-        console.log(input);
+        const nameInput=e.target.name;
+        setInput({...input,[nameInput]:e.target.value});
 
     }
+    console.log(input);
     return (
         <div>
          <Form >
         <Form.Group>
           <Form.Control
-            type="text"
+            type="number"
             name="id"
             onChange={handleInput}
             placeholder="Enter ID"
@@ -40,7 +46,7 @@ const Create = () => {
         </Form.Group>
         <Form.Group>
           <Form.Control
-            type="text"
+            type="number"
             name="salary"
             onChange={handleInput}
             placeholder="Enter Salary"
