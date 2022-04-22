@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../UserContext/UserContext';
@@ -6,7 +6,15 @@ import { UserContext } from '../UserContext/UserContext';
 const Edit = () => {
     const[users,setUsers]=useContext(UserContext);
     const {id} = useParams();
-    const user = users.filter(user => user.id==id)
+    const user = users.filter(user => user.id==id);
+    const [update,setUpdate]=useState({name:user[0].name,position:user[0].position,
+        salary:user[0].salary
+
+    })
+    console.log('f',update);
+    const handleUpdate = (e) =>{
+        
+    }
     return (
         <div>
      <Form>
