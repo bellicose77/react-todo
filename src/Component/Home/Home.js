@@ -39,7 +39,9 @@ const Home = () => {
               <Button variant='success'>Read</Button>
               </Link>
                 
-                <Button variant='info'>Edit</Button>
+              <Link to={`/edit/${user.id}`}>
+              <Button variant='info'>Edit</Button>
+              </Link>
                 <Link to={`delete/${user.id}`}>
                 <Button variant='danger'>Delete</Button>
                 </Link>
