@@ -11,17 +11,30 @@ const Edit = () => {
         salary:user[0].salary
 
     })
-    console.log('f',update);
+    // console.log('f',update);
     const handleUpdate = (e) =>{
-        setUpdate({...update,[e.target.name]:e.target.value});
-        user[0].e.target.name= update;
-
+        const nameValue=e.target.name;
+        const mainValue=e.target.value;
+        setUpdate({...update,nameValue:mainValue});
+        //const valueinput=update;
+       if(nameValue == 'name'){
+           user[0].name=e.target.value;
+       }
+       else if(mainValue == 'position'){
+           user[0].position=e.target.value;
+       }
+       else{
+           user[0].salary=e.target.value;
+       }
     }
+    console.log('valu',user);
+  
+
     const handleSubmitUpdate=(e)=>{
         e.preventDefault();
         setUsers([...users])
     }
-    console.log(users)
+    //console.log(users)
     return (
         <div>
      <Form>
