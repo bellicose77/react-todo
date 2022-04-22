@@ -16,11 +16,15 @@ const Create = () => {
         const nameInput=e.target.name;
         setInput({...input,[nameInput]:e.target.value});
 
+    };
+    const handleSubmit = (e) =>{
+      e.preventDefault();
+      setUsers([...users,input]);
     }
-    console.log(input);
+    console.log(users);
     return (
         <div>
-         <Form >
+         <Form onSubmit={handleSubmit} >
         <Form.Group>
           <Form.Control
             type="number"
