@@ -13,7 +13,8 @@ const Edit = () => {
     })
     console.log('f',update);
     const handleUpdate = (e) =>{
-        
+        setUpdate({...update,[e.target.name]:e.target.value});
+
     }
     return (
         <div>
@@ -27,7 +28,8 @@ const Edit = () => {
           <Form.Control
             type="text"
             name="name"
-            // value={user[0].name}
+            value={update.name}
+            onChange={handleUpdate}
             placeholder={user[0].name}
            
           />
@@ -36,8 +38,8 @@ const Edit = () => {
           <Form.Control
             type="text"
             name="position"
-            // value={user[0].position}
-            // onChange={editPosition}
+            value={update.value}
+            onChange={handleUpdate}
             placeholder={user[0].position}
           />
         </Form.Group>
@@ -45,8 +47,8 @@ const Edit = () => {
           <Form.Control
             type="text"
             name="salary"
-            // value={salary}
-            // onChange={editSalary}
+            value={update.salary}
+            onChange={handleUpdate}
             placeholder={user[0].salary}
           />
         </Form.Group>
