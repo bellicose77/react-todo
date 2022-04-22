@@ -19,14 +19,16 @@ const Edit = () => {
           <Form.Control
             type="text"
             name="name"
+            // value={user[0].name}
             placeholder={user[0].name}
+           
           />
         </Form.Group>
         <Form.Group>
           <Form.Control
             type="text"
             name="position"
-            // value={position}
+            // value={user[0].position}
             // onChange={editPosition}
             placeholder={user[0].position}
           />
