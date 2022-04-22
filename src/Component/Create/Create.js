@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext/UserContext';
+import '../Create/Create.css'
 
 const Create = () => {
     const[users,setUsers]=useContext(UserContext);
