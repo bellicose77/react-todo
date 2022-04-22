@@ -32,7 +32,7 @@ const Home = () => {
             <td>{user.position}</td>
             <td>{user.salary}</td>
             <td>
-              <Link to={`/read/:${user.id}`}>
+              <Link to={`/read/${user.id}`}>
               <Button variant='success'>Read</Button>
               </Link>
                 
