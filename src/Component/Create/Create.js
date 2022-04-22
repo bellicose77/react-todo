@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { UserContext } from '../UserContext/UserContext';
 
 const Create = () => {
@@ -52,6 +53,14 @@ const Create = () => {
             placeholder="Enter Salary"
           />
         </Form.Group>
+        <Button className="action_btn" variant="primary" type="submit">
+          Create User
+        </Button>
+        <Link to="/">
+          <Button className="action_btn" variant="info">
+            Back to Home
+          </Button>
+        </Link>
         </Form>
         </div>
     );
