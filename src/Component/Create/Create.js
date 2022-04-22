@@ -1,9 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { UserContext } from '../UserContext/UserContext';
 
 const Create = () => {
     const[users,setUsers]=useContext(UserContext);
+    const[input,setInput]=useState({})
+    const handleInput = (e) =>{
+        const nameInput=e.target.event;
+        setInput([...input,{nameInput:e.target.value}]);
+        console.log(input);
+
+    }
     return (
         <div>
          <Form >
