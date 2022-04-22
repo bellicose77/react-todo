@@ -14,8 +14,14 @@ const Edit = () => {
     console.log('f',update);
     const handleUpdate = (e) =>{
         setUpdate({...update,[e.target.name]:e.target.value});
+        user[0].e.target.name= update;
 
     }
+    const handleSubmitUpdate=(e)=>{
+        e.preventDefault();
+        setUsers([...users])
+    }
+    console.log(users)
     return (
         <div>
      <Form>
@@ -53,7 +59,7 @@ const Edit = () => {
           />
         </Form.Group>
         <Link to="/">
-          <Button variant="primary" type="submit">
+          <Button onClick={(e)=>handleSubmitUpdate(e)} variant="primary" type="submit">
             Edit User
           </Button>
           <Button className="action_btn" variant="info">
