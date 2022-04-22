@@ -8,7 +8,10 @@ const Home = () => {
     //console.log(user)
     return (
         <div>
-            <Button variant="primary">Add User</Button>
+          <Link to='/create'>
+          <Button variant="primary">Add User</Button>
+          </Link>
+           
             <br/>
             <br/>
             <Table striped bordered hover>
